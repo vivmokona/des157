@@ -1,0 +1,67 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0 auto;
+    width: 800px;
+}
+
+header {
+    width: 800px;
+    height: 250px;
+    padding: 30px;
+}
+
+#vivian {
+    margin-left: 20px;
+}
+
+#name {
+    color: #51DCFF;
+    font-size: 35px;
+    margin: auto;
+    margin-left: 10px;
+}
+
+#class {
+    display: inline-block;
+    color: #929ba8;
+    font-size: 30px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+#columns {
+    clear: both;
+    margin: auto;
+}
+
+nav {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+div {
+    float: left;
+    width: 220px;
+    margin-top: -10px;
+}
+
+#studios {
+    margin-left: 40px;
+    text-decoration: underline;
+    text-decoration-color: #51DCFF;
+}
+
+#projects {
+    margin-left: 70px;
+    text-decoration: underline;
+    text-decoration-color: #51DCFF;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    display: inline-block;
+    padding-top: 80px;
+    width: 100%;
+    word-spacing: 1px;
+}
