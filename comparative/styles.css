@@ -44,14 +44,12 @@ div {
 #creatives {
     margin-left: 40px;
     margin-top: 10px;
-    text-decoration: underline;
     text-decoration-color: #51DCFF;
 }
 
-#project2 {
-    margin-left: 70px;
-    text-decoration: underline;
-    text-decoration-color: #51DCFF;
+#paragraph{
+    margin-top:920px;
+    padding: 20px;
 }
 
 footer {
