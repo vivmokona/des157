@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="cssreset">
+    <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
@@ -24,16 +24,16 @@
             </div-->
             <div>
                 <label for="adj">Adjective</label>
-                <input type="text" name="adj" required>
+                <input type="text" name="adj" id="adj">
             </div>
             <div>
                 <label for="noun1">Noun</label>
-                <input type="text" name="noun" required>
+                <input type="text" name="noun" id="noun">
             </div>
             <!--Tea Leaf Choices-->
             <div>
                 <label for="tea">Tea Leaf</label>
-                <input type="text" name="tealeaf" list="leaves">
+                <input type="text" name="tealeaf" list="leaves" id="tealeaf">
                 <datalist id="leaves">
                     <option>Black</option>
                     <option>Earl Gray</option>
@@ -45,19 +45,19 @@
             </div>
             <div>
                 <label for="num1">Favorite number</label>
-                <input type="number" name="number1" required>
+                <input type="number" name="number1" id="number1">
             </div>
             <div>
                 <label for="num2">2nd Favorite number</label>
-                <input type="number" name="number2" required>
+                <input type="number" name="number2" id="number2">
             </div>
             <div>
                 <label for="verb">Verb</label>
-                <input type="text" name="verb" required>
+                <input type="text" name="verb" id="verb">
             </div>
             <div>
                 <label for="noun2">Noun</label>
-                <input type="text" name="noun2" required>
+                <input type="text" name="noun2" id="noun2">
             </div>
 
             <!--Reset/Submit Buttons-->
