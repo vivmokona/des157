@@ -13,6 +13,7 @@ document.f.onreset = resetForm;
 var results = document.getElementById("results");
 var myMsg = document.getElementById("myMsg");
 
+
 //define the process function
 function processForm() {
     console.log("you're inside processForm");
@@ -29,7 +30,6 @@ function processForm() {
     var verb = document.f.verb.value;
     var noun2 = document.f.noun2.value;
     
-    var myMsg=document.getElementById("myMsg");
 
     // My message
     myMsg.innerHTML = "Boil," + tea + " leaves" < br >
@@ -43,7 +43,7 @@ function processForm() {
     return false;
 }
 
-// set the hide the message and the image
+ set the hide the message and the image
 function resetForm() {
     console.log("you're inside resetForm");
     myMsg.innerHTML = "";
