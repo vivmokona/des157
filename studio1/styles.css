@@ -1,0 +1,102 @@
+/* CSS for Studio 1*/
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0 auto;
+    width: 1366px;
+    height: 768px;
+    background-color: mintcream;
+    padding: 25px;
+    font-size: 18px;
+}
+
+header {
+    height: 20px;
+    padding-top: 5px;
+    padding-bottom: 60px;
+    padding-left: 10px;
+    font-size: 30px;
+}
+
+article {
+    display: block;
+    width: 400px;
+    border-radius: 10px;
+    float: left;
+}
+
+div {
+    padding: 5px;
+}
+
+label {
+    width: 150px;
+    text-align: left;
+    display: inline-block;
+    padding-right: 3%;
+    padding-bottom: 5px;
+}
+
+input {
+    width: 200px;
+    border-radius: 20px;
+    padding: 4px;
+
+}
+
+input:hover {
+    background-color: aliceblue;
+}
+
+input[type="reset"] {
+    width: 150px;
+    border-radius: 10px;
+    padding: 6px;
+    font-weight: bold;
+    background-color: #ffbfbf;
+}
+
+input[type="submit"] {
+    width: 150px;
+    border-radius: 10px;
+    padding: 6px;
+    font-weight: bold;
+    background-color: darkseagreen;
+}
+
+section p {
+    float: left;
+    text-align: left;
+    width: 400px;
+    height: 250px;
+    padding: 15px;
+    background-color: pink;
+}
+
+#myMsg{
+    text-align: left;
+}
+
+#boba {
+    margin-top: 120px;
+}
+
+/*show and hide message  */
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    clear: both;
+    text-align: center;
+    padding: 0px 50px 0px 250px;
+    margin: 10px;
+    word-spacing: 1px;
+}
