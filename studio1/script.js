@@ -6,25 +6,14 @@ console.log("reading");
 //captures the submit event
 document.f.onsubmit = processForm;
 //captures the reset event
-//document.f.onreset = resetForm;
-
-/*set the hide the message and the image
-function resetForm() {
-    myMsg.innerHTML = "";
-    myMsg.setAttribute('class', 'hide');
-    results.setAttribute('class', 'hide');
-*/
-
+document.f.onreset = resetForm;
 
 //intialize to get text input
 var results = document.getElementById("results");
 var myMsg = document.getElementById("myMsg");
 
-
 //define the process function
 function processForm() {
-    myMsg.setAttribute('class', 'show');
-    results.setAttribute('class', 'show');
 
     //store fields in variables
     // var userName = document.f.userName.value;
@@ -36,7 +25,7 @@ function processForm() {
     var verb = document.f.verb.value;
     var noun2 = document.f.noun2.value;
 
-    document.getElementById("myMsg").innerHTML;
+    // document.getElementById("myMsg").innerHTML;
 
     // My message
     myMsg.innerHTML = "Boil " + tea + " tea leaves <br>" +
@@ -44,8 +33,18 @@ function processForm() {
         "Add " + num2 + "% ice <br>" +
         "Shake and " + verb + " around! <br>" +
         "Add " + noun2 + " and boba <br>" +
-        "Serve and sip on your " + adj + noun1;
+        "Serve and sip on your " + adj + " " + noun1;
+
+    //show results
+    myMsg.setAttribute('class', 'show');
+    results.setAttribute('class', 'show');
 
     //prevent page from reloading
     return false;
+}
+
+//set the clear & hide the message and image
+function resetForm() {
+    myMsg.innerHTML = "";
+    results.setAttribute('class', 'hide');
 }
