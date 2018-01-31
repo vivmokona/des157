@@ -8,7 +8,6 @@
     <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
     <title>Vivian Luu Studio 1: Mad Libs</title>
 </head>
 
@@ -28,12 +27,12 @@
             </div>
             <div>
                 <label for="noun1">Noun</label>
-                <input type="text" name="noun" id="noun">
+                <input type="text" name="noun1" id="noun1">
             </div>
             <!--Tea Leaf Choices-->
             <div>
                 <label for="tea">Tea Leaf</label>
-                <input type="text" name="tealeaf" list="leaves" id="tealeaf">
+                <input type="text" name="tea" list="leaves" id="tea">
                 <datalist id="leaves">
                     <option>Black</option>
                     <option>Earl Gray</option>
@@ -45,11 +44,11 @@
             </div>
             <div>
                 <label for="num1">Favorite number</label>
-                <input type="number" name="number1" id="number1">
+                <input type="number" name="num1" id="num1">
             </div>
             <div>
                 <label for="num2">2nd Favorite number</label>
-                <input type="number" name="number2" id="number2">
+                <input type="number" name="num2" id="num2">
             </div>
             <div>
                 <label for="verb">Verb</label>
@@ -65,10 +64,10 @@
                 <input type="reset" value="Oops Remake">
                 <input type="submit" value="Shake to Make!">
             </div>
-            
+
         </form>
     </article>
-    
+
     <!--Hide and Show Message-->
     <section id="results" class="hide">
         <p id="myMsg"></p>
