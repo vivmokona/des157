@@ -63,19 +63,6 @@ h1 {
     top: 0;
 }
 
-footer {
-    display: inline-block;
-    padding: 0px 25px 0px 25px;
-    position: relative;
-    top: 265px;
-    left: 40%;
-    background-color: brown;
-}
-
-footer:hover {
-    background-color: yellow;
-}
-
 @media only screen and (min-width: 768px) {
     /* ^This is for deskstop view */
     body {
@@ -248,8 +235,8 @@ h1 {
 footer {
     display: inline-block;
     padding: 0px 25px 0px 25px;
-    position: relative;
-    bottom: auto;
+    position: absolute;
+    bottom: 10px;
     left: 40%;
     background-color: brown;
 }
