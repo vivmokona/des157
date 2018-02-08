@@ -97,7 +97,7 @@ h1 {
 #question1:hover,
 #question2:hover,
 #question3:hover {
-    background-color: yellow;
+    background-color: #fff589;
     transition-duration: 1s;
 }
 
