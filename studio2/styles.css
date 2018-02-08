@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 40px;
+    position: absolute;
+    top: 1%;
+    left: 8%;
+    color: white;
+}
+
+h1 {
+    font-family: 'Bungee Shade', cursive;
+    width: 60%;
+    margin-left: 50px;
+}
+
+#question {
+    display: block;
+    margin-top: 160px;
+    padding: 20px;
+    text-align: center;
+}
+
+#phoneoverlay {
+    position: absolute;
+    background-color: rgba(55, 186, 0, .90);
+    color: whitesmoke;
+    display: none;
+}
+
+#phoneoverlay div {
+    width: 10px;
+    float: left;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+#phoneoverlay p {
+    width: 80%;
+    margin-left: 50px;
+}
+
+#phone {
+    position: absolute;
+    left: 10px;
+    top: 50px;
+}
+
+#left {
+    position: absolute;
+    display: block;
+    padding: 10px;
+    left: 20%;
+}
+
+#close {
+    color: black;
+    right: 0;
+    top: 0;
+}
+
+footer {
+    display: inline-block;
+    padding: 0px 25px 0px 25px;
+    position: relative;
+    top: 265px;
+    left: 40%;
+    background-color: brown;
+}
+
+footer:hover {
+    background-color: yellow;
+}
+
+@media only screen and (min-width: 768px) {
+    /* ^This is for deskstop view */
+    body {
+        background-image: url(img/background.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+
+header {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+}
+
+/*How  do I make a block animate/move when I hover https://www.w3schools.com/howto/howto_css_shake_image.asp */
+
+h1 {
+    font-family: 'Bungee Shade', cursive;
+}
+
+#question {
+    display: block;
+    margin-top: 140px;
+    text-align: center;
+}
+
+#question1:hover,
+#question2:hover,
+#question3:hover {
+    background-color: yellow;
+    transition-duration: 0.5s;
+}
+
+#phoneoverlay {
+    position: absolute;
+    padding: 30px;
+    top: 150px;
+    left: 100px;
+    width: 80%;
+    height: 60%;
+    background-color: rgba(55, 186, 0, .90);
+    color: whitesmoke;
+    display: none;
+}
+
+#phoneoverlay div {
+    width: 600px;
+    float: left;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#phone {
+    position: absolute;
+    left: 55px;
+    top: 20px;
+}
+
+#left {
+    position: absolute;
+    display: block;
+    padding: 10px;
+    left: 24%;
+}
+
+#close {
+    color: black;
+    right: 0;
+    top: 0;
+}
+
+/*CSS for 2nd item, a pen! */
+
+#penoverlay {
+    position: absolute;
+    padding: 30px;
+    top: 150px;
+    left: 100px;
+    width: 80%;
+    height: 60%;
+    background-color: rgba(55, 186, 0, .90);
+    color: whitesmoke;
+    display: none;
+}
+
+#penoverlay div {
+    width: 530px;
+    float: left;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#pen {
+    position: absolute;
+    left: 90px;
+    top: 30px;
+}
+
+#leftpen {
+    position: absolute;
+    display: block;
+    padding: 10px;
+    left: 24%;
+}
+
+#close2 {
+    color: black;
+    right: 0;
+    top: 0;
+}
+
+/*CSS for 3rd item, keys! */
+
+#keysoverlay {
+    position: absolute;
+    padding: 30px;
+    top: 150px;
+    left: 100px;
+    width: 80%;
+    height: 60%;
+    background-color: rgba(55, 186, 0, .90);
+    color: whitesmoke;
+    display: none;
+}
+
+#keysoverlay div {
+    width: 480px;
+    float: left;
+    left: 32%;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#keys {
+    position: absolute;
+    left: 20px;
+    top: 25px;
+}
+
+#leftkeys {
+    position: absolute;
+    display: block;
+    padding: 10px;
+    left: 24%;
+}
+
+#left {
+    display: block;
+    padding: 0px;
+    margin-left: 10px;
+}
+
+#close3 {
+    position: absolute;
+    color: black;
+    right: 10px;
+    top: 10px;
+}
+
+/*The Footer*/
+
+footer {
+    display: inline-block;
+    padding: 0px 25px 0px 25px;
+    position: relative;
+    bottom: auto;
+    left: 40%;
+    background-color: brown;
+}
+
+footer:hover {
+    background-color: yellow;
+}
