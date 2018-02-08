@@ -98,7 +98,7 @@ h1 {
 #question2:hover,
 #question3:hover {
     background-color: yellow;
-    transition-duration: 0.5s;
+    transition-duration: 1s;
 }
 
 #phoneoverlay {
