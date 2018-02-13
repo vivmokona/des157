@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    width: 800px;
+    height: 520px;
+    margin: 0 auto;
+    font-family: 'Ubuntu', sans-serif;
+    background: linear-gradient(to bottom right, rgb(186, 234, 175), darkseagreen 60%, darkgreen);
+}
+
+header {
+    font-weight: 500;
+    font-size: 40px;
+    margin: 30px 0px 0px 30px;
+    color: darkolivegreen;
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 18px;
+    padding-left: 30px;
+    margin-top: 0px;
+    color: cornsilk;
+}
+
+#profile {
+    position: relative;
+    left: 60%;
+    bottom: 69px;
+}
+
+#geninfo {
+    position: absolute;
+    top: 15%;
+    padding-left: 21px;
+    line-height: 20px;
+}
+
+#details {
+    position: absolute;
+    padding-left: 25px;
+    margin: auto;
+    top: 40%;
+    width: 700px;
+}
+
+#details b {
+    color: cornsilk;
+}
+
+#situation {
+    position: absolute;
+    padding-left: 25px;
+    top: 68%;
+    width: 700px;
+    line-height: 20px;
+}
+
+/*The Footer*/
+
+footer {
+    display: inline-block;
+    padding: 0px 25px 0px 25px;
+    position: fixed;
+    bottom: 2px;
+    left: 29%;
+    word-spacing: 1px;
+}
+
+footer:hover {
+    background-color: olive;
+}
