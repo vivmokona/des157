@@ -2,6 +2,17 @@
     box-sizing: border-box;
 }
 
+@media only screen and (min-width: 768px) {
+    /* ^This is for deskstop view */
+    body {
+        background-image: url(img/background.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+
 header {
     font-family: 'Press Start 2P', cursive;
     font-size: 40px;
@@ -63,17 +74,6 @@ h1 {
     top: 0;
 }
 
-@media only screen and (min-width: 768px) {
-    /* ^This is for deskstop view */
-    body {
-        background-image: url(img/background.png);
-        background-repeat: no-repeat;
-        background-position: bottom;
-        background-attachment: fixed;
-        background-size: cover;
-    }
-}
-
 header {
     font-family: 'Press Start 2P', cursive;
     font-size: 40px;
@@ -81,6 +81,7 @@ header {
     margin-top: 50px;
     color: white;
 }
+
 
 /*How  do I make a block animate/move when I hover https://www.w3schools.com/howto/howto_css_shake_image.asp */
 
@@ -140,6 +141,7 @@ h1 {
     top: 0;
 }
 
+
 /*CSS for 2nd item, a pen! */
 
 #penoverlay {
@@ -180,6 +182,7 @@ h1 {
     right: 0;
     top: 0;
 }
+
 
 /*CSS for 3rd item, keys! */
 
@@ -229,6 +232,7 @@ h1 {
     right: 10px;
     top: 10px;
 }
+
 
 /*The Footer*/
 
