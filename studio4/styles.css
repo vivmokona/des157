@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Saira Semi Condensed', sans-serif;
+    margin: 0 auto;
+    background-color: paleturquoise;
+    padding: 25px;
+    font-size: 18px;
+}
+
+header {
+    font-family: 'Megrim', cursive;
+    font-size: 45px;
+    display: inline-block;
+}
+
+#map {
+    position: absolute;
+    left: 12%;
+    padding: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 90%;
+    text-align: center;
+    margin: 10px;
+    word-spacing: 1px;
+}

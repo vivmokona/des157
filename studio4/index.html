@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, inital-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Megrim%7CSaira+Semi+Condensed" rel="stylesheet">
+
+    <!--This is from Mapbox-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+
+    <link href="styles.css" rel="stylesheet">
+
+    <title>Vivian Luu: Studio 4</title>
+</head>
+
+<body>
+    <header>Geolocation</header>
+
+    <div id='map' style='width: 750px; height: 450px;'></div>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoidml2bW9rb25hIiwiYSI6ImNqZG92NGYyeDA4MGQycm80cDljaXEzbDAifQ.s9ln4rd7DomkLRJ4g7FOCA';
+
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/dark-v9',
+            center: [-121.740517, 38.544907],
+            zoom: 13
+        });
+
+        map.on('load', function() {
+            // Add a layer showing the places.
+            map.addLayer({
+                "id": "places",
+                "type": "symbol",
+                "source": {
+                    "type": "geojson",
+                    "data": {
+                        "type": "FeatureCollection",
+                        "features": [{
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<strong>Arboretum</strong><p>A nice nature-fulled park near the campus of UC Davis.</p>",
+                                "icon": "park"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [-121.747682, 38.537955]
+                            }
+                        }, {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<strong>Dutch Bros</strong><p>A 24/7 drive-through coffee spot to fill your caffeine needs, especially when you need to stay up to code.</p>",
+                                "icon": "cafe"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [-121.738579, 38.540513]
+                            }
+                        }, {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<strong>Burgers & Brew</strong><p>A local burgers resturaunt that is actually open until 3 AM. So if you're a college student looking for a midnight snack, head over to here!</p>",
+                                "icon": "fast-food"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [-121.743472, 38.544406]
+                            }
+                        }, {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<strong>Ballston Arts & Crafts Market</strong><p>The <a href=\"http://ballstonarts-craftsmarket.blogspot.com/\" target=\"_blank\" title=\"Opens in a new window\">Ballston Arts & Crafts Market</a> sets up shop next to the Ballston metro this Saturday for the first of five dates this summer. Nearly 35 artists and crafters will be on hand selling their wares. 10:00-4:00 p.m.</p>",
+                                "icon": "art-gallery"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [-77.111561, 38.882342]
+                            }
+                        }, {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<strong>The Bike Loop</strong><p>Feeling like sightseeing parts of Davis like a true resident? Grab your bike, and start peddling.</p>",
+                                "icon": "bicycle"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [--121.746953, 38.550688]
+                            }
+                        }, {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<strong>Regal Cinemas</strong><p>Movie theatre that has a wonderful deal for students on Tuesday with $5 tickets!</p>",
+                                "icon": "cinema"
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [-121.740103, 38.542443]
+                            }
+                        }, ]
+                    }
+                },
+                "layout": {
+                    "icon-image": "{icon}-15",
+                    "icon-allow-overlap": true
+                }
+            });
+
+            // When a click event occurs on a feature in the places layer, open a popup at the
+            // location of the feature, with description HTML from its properties.
+            map.on('click', 'places', function(e) {
+                var coordinates = e.features[0].geometry.coordinates.slice();
+                var description = e.features[0].properties.description;
+
+                // Ensure that if the map is zoomed out such that multiple
+                // copies of the feature are visible, the popup appears
+                // over the copy being pointed to.
+                while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                }
+
+                new mapboxgl.Popup()
+                    .setLngLat(coordinates)
+                    .setHTML(description)
+                    .addTo(map);
+            });
+
+            // Change the cursor to a pointer when the mouse is over the places layer.
+            map.on('mouseenter', 'places', function() {
+                map.getCanvas().style.cursor = 'pointer';
+            });
+
+            // Change it back to a pointer when it leaves.
+            map.on('mouseleave', 'places', function() {
+                map.getCanvas().style.cursor = '';
+            });
+        });
+
+    </script>
+
+    <footer>
+        <a href=" https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+    </footer>
+
+    <!--<script href="script.js"></script>-->
+</body>
+
+</html>
