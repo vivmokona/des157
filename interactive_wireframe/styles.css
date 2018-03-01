@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Muli', sans-serif;
+    background-color: lightgray;
+    background-image: url(img/mapback.png);
+}
+
+h1 {
+    padding: 5px;
+    color: deepskyblue;
+}
+
+main {
+    position: absolute;
+    height: 250px;
+    width: 600px;
+    display: block;
+    top: 50%;
+    margin-top: -125px;
+    text-align: center;
+    left: 50%;
+    margin-left: -300px;
+}
+
+main p {
+    color: white;
+    width: 550px;
+    height: 130px;
+    padding: 30px;
+    display: block;
+    margin: auto;
+}
+
+.btn {
+    background-color: lightcoral;
+    padding: 10px;
+}
