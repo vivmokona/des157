@@ -1,21 +1,18 @@
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0 auto;
-    width: 900px;
-    height: 1050px;
+    width: 800px;
 }
 
 header {
-    color: #51DCFF;
     width: 800px;
     height: 20px;
 }
 
 #name {
-
+    color: #51DCFF;
     font-size: 35px;
     margin: auto;
-    margin-left: 10px;
 }
 
 footer {
