@@ -22,7 +22,7 @@
         }
 
         .marker {
-            background-image: url('phone-icon.png');
+/*            background-image: url('phone-icon.png');*/
             background-size: cover;
             width: 20px;
             height: 20px;
@@ -37,15 +37,6 @@
         .mapboxgl-popup-content {
             text-align: center;
             font-family: 'Open Sans', sans-serif;
-        }
-
-        .graphic {
-            background-image: url('mapbox-icon.png');
-            background-size: cover;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            cursor: pointer;
         }
 
     </style>
@@ -64,7 +55,7 @@
             center: [-96, 37.8],
             zoom: 3.3
         });
-
+        
         var geojson = {
             type: 'FeatureCollection',
             features: [{
@@ -85,8 +76,8 @@
                         coordinates: [-122.414, 37.776]
                     },
                     properties: {
-                        title: 'Mapbox',
-                        description: 'San Francisco, California'
+                        title: '<strong>Tiffany Trieu</strong>',
+                        description: '<p>Exhibition Designer based in San Francisco, CA.</p> <a href=\"http://www.itstiffanytrieu.com\" target=\"_blank\" title=\"Opens in a new window\"><p>Learn more</a> about Tiffany!</p>'
                     }
                 },
 
@@ -119,23 +110,6 @@
                         offset: 25
                     }) // add popups
                     .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
-                .addTo(map);
-        });
-
-        // add markers to map
-        geojson.features.forEach(function(graphic) {
-
-            // create a HTML element for each feature
-            var el = document.createElement('div');
-            el.className = 'graphics';
-
-            // make a marker for each feature and add to the map
-            new mapboxgl.Graphics(el)
-                .setLngLat(graphics.geometry.coordinates)
-                .setPopup(new mapboxgl.Popup({
-                        offset: 25
-                    }) // add popups
-                    .setHTML('<h3>' + graphic.properties.title + '</h3><p>' + graphic.properties.description + '</p>'))
                 .addTo(map);
         });
 
