@@ -1,106 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset='utf-8' />
-    <title></title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, inital-scale=1.0">
+    <link href="https://meyerweb.com/eric/tools/css/reset/reset.css" rel="styles">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href=styles.css rel="stylesheet">
+    <title>Vivian Luu: Corps</title>
 
-        #map {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .marker {
-            background-image: url('mapbox-icon.png');
-            background-size: cover;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-
-        .mapboxgl-popup {
-            max-width: 200px;
-        }
-
-        .mapboxgl-popup-content {
-            text-align: center;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-    </style>
 </head>
 
 <body>
+    <header id="corps">
+    </header>
 
-    <div id='map'></div>
+    <section id="title">
+        <h1 id="name">Corps</h1>
+    </section>
 
-    <script>
-        mapboxgl.accessToken = 'pk.eyJ1Ijoidml2bW9rb25hIiwiYSI6ImNqZG92NGYyeDA4MGQycm80cDljaXEzbDAifQ.s9ln4rd7DomkLRJ4g7FOCA';
+    <section id="corps">
+        <img src="img/map1.png" alt="Map 1" width="800" height="470">
+        <img src="img/map2.png" alt="Map 2" width="800" height="470">
+    </section>
 
-        var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/light-v9',
-            center: [-96, 37.8],
-            zoom: 3
-        });
-
-        var geojson = {
-            type: 'FeatureCollection',
-            features: [{
-                    type: 'Feature',
-                    geometry: {
-                        type: 'Point',
-                        coordinates: [-77.032, 38.913]
-                    },
-                    properties: {
-                        title: 'Mapbox',
-                        description: 'Washington, D.C.'
-                    }
-                },
-                {
-                    type: 'Feature',
-                    geometry: {
-                        type: 'Point',
-                        coordinates: [-122.414, 37.776]
-                    },
-                    properties: {
-                        title: 'Mapbox',
-                        description: 'San Francisco, California'
-                    }
-                }
-            ]
-        };
-
-        // add markers to map
-        geojson.features.forEach(function(marker) {
-
-            // create a HTML element for each feature
-            var el = document.createElement('div');
-            el.className = 'marker';
-
-            // make a marker for each feature and add to the map
-            new mapboxgl.Marker(el)
-                .setLngLat(marker.geometry.coordinates)
-                .setPopup(new mapboxgl.Popup({
-                        offset: 25
-                    }) // add popups
-                    .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
-                .addTo(map);
-        });
-
-    </script>
+    <footer>
+        <a href="../index.html">Home</a>
+        <a href="https://github.com/vivmokona">Github</a>
+        <a href="mailto:vyluu@ucdavis.edu">Contact Me</a>
+        <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+    </footer>
 
 </body>
 
