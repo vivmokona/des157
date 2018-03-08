@@ -181,6 +181,9 @@
             ]
         };
 
+        // Add zoom and rotation controls to the map.
+        map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+
         // add markers to map
         geojson.features.forEach(function(marker) {
 
@@ -197,7 +200,6 @@
                     .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
                 .addTo(map);
         });
-
     </script>
 
 </body>
