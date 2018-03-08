@@ -16,13 +16,17 @@
     <div id='map'></div>
 
     <div class="navbar">
+        <section id="title"><a href="https://fxtzhou.github.io/des157/projects/interactiveprototype2/interactiveprototype2.html">Designers of Color Map</a></section>
+        <a href="https://fxtzhou.github.io/des157/projects/interactiveprototype2/interactiveprototype2.html"><img id='logo' src="img/logo.png" alt="Logo" width="30px" height="30px"></a>
+        <!--
         <a href="https://vivmokona.github.io/des157/proto2/index.html">Home</a>
         <a href="https://fxtzhou.github.io/des157/projects/interactiveprototype2/interactiveprototype2.html">About</a>
         <a href="#contact">Contact</a>
+-->
         <div class="dropdown">
-            <button class="dropbtn" onclick="myFunction()">Dropdown
-      <i class="fa fa-caret-down"></i>
-    </button>
+            <button class="dropbtn" onclick="myFunction()">More Info
+                <i class="fa fa-caret-down"></i>
+            </button>
             <div class="dropdown-content" id="myDropdown">
                 <a href="https://vivmokona.github.io/des157/proto2/index.html">Home</a>
                 <a href="https://fxtzhou.github.io/des157/projects/interactiveprototype2/interactiveprototype2.html">About</a>
@@ -46,8 +50,8 @@
         var map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/vivmokona/cjdyjzgzt0dh02so8r31y2d9t',
-            center: [-96, 37.8],
-            zoom: 3.3
+            center: [-98.5795, 39.8283],
+            zoom: 3.5
         });
 
         /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
@@ -56,7 +60,7 @@
         }
 
         // Close the dropdown if the user clicks outside of it
-        window.onclick = function(e) {
+        window.onclick = function (e) {
             if (!e.target.matches('.dropbtn')) {
                 var myDropdown = document.getElementById("myDropdown");
                 if (myDropdown.classList.contains('show')) {
@@ -164,7 +168,7 @@
                     },
                     properties: {
                         title: 'Michelle Quach',
-                        description: '<p>Transportation Designer based in San Francisco, CA.</p> <a href=\"https://miquach.github.io/des157/" target=\"_blank\" title=\"Opens in a new window\"><p>Learn more</a> about Michelle!</p>'
+                        description: '<p>Visual Designer based in San Francisco, CA.</p> <a href=\"https://miquach.github.io/des157/" target=\"_blank\" title=\"Opens in a new window\"><p>Learn more</a> about Michelle!</p>'
                     }
                 },
                 {
@@ -182,10 +186,10 @@
         };
 
         // Add zoom and rotation controls to the map.
-        map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+        map.addControl(new mapboxgl.NavigationControl(), 'bottom-left');
 
         // add markers to map
-        geojson.features.forEach(function(marker) {
+        geojson.features.forEach(function (marker) {
 
             // create a HTML element for each feature
             var el = document.createElement('div');
