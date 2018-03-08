@@ -6,7 +6,7 @@ body {
 
 #map {
     position: absolute;
-    top: 0;
+    top: 6%;
     bottom: 0;
     width: 100%;
 }
@@ -86,7 +86,7 @@ footer {
 .navbar a:hover,
 .dropdown:hover .dropbtn,
 .dropbtn:focus {
-    background-color: red;
+    background-color: skyblue;
 }
 
 .dropdown-content {
