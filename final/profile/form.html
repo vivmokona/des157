@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/normalize.css@7.0.0/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400:700|Roboto+Condensed|Lobster" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link href=styles.css rel="stylesheet">
+    <title>Vivian Luu DES 157 Portal</title>
+</head>
+
+<body>
+    <!--Nav-->
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction()">More Info
+      <i class="fa fa-caret-down"></i>
+    </button>
+            <div class="dropdown-content" id="myDropdown">
+                <a href="https://vivmokona.github.io/des157/proto2/index.html">Home</a>
+                <a href="https://fxtzhou.github.io/des157/projects/final/index.html">About</a>
+                <a class="active" href="#">Profile</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </div>
+    <!--Prompt-->
+    <section id="instructions">
+        <h2>Creating your Profile</h2>
+        <h3>Fill out this form to be added to the Designers of Color Map!</h3>
+    </section>
+
+    <!--Contact Form-->
+
+    <div class="container">
+        <form action="/action_page.php">
+            <label for="fname">Full Name</label>
+            <input type="text" required id="fname" name="firstname" placeholder="Your name">
+
+            <label for="field">Your Field of Design</label>
+            <select id="field" name="field">
+                <option value="#"></option>
+                <option value="exhibition">Exhibition</option>
+                <option value="fashion">Fashion</option>
+                <option value="freelance">Freelance</option>
+                <option value="graphic">Graphic</option>
+                <option value="interiors">Interiors</option>
+                <option value="industrial">Industrial</option>
+                <option value="landscape">Landscape</option>
+                <option value="motion">Motion</option>
+                <option value="produce">Product</option>
+                <option value="uiux">UI/UX</option>
+                <option value="visual">Visual</option>
+                <option value="web">Web</option>
+    </select>
+
+            <label for="q1" required>What intrigued you to Design and why did you choose the field you are in now?</label>
+            <textarea id="q1" name="question1" placeholder="What intrigued me was..." style="height:100px"></textarea>
+
+            <label for="q2">What have been your biggest struggles of your career?</label>
+            <textarea id="q2" name="question2" style="height:100px"></textarea>
+
+            <label for="q3">What have your experiences been like as a person of color in the design industry? Does those experiences shape how you solve design-related problems?</label>
+            <textarea id="q3" name="question3" style="height:100px"></textarea>
+
+            <label for="q4">What have your experiences been like as a person of color in the design industry? Does those experiences shape how you solve design-related problems?</label>
+            <textarea id="q4" name="question4" style="height:100px"></textarea>
+
+            <label for="q5">How can design be more accommodating to underrepresented populations of people?</label>
+            <textarea id="q5" name="question5" style="height:100px"></textarea>
+
+            <label for="q6">Your Location (Please provide a zip code or just your city & state) </label>
+            <input type="text" id="q6" name="question6" placeholder="Example: San Francisco, CA or 90210">
+
+            <!--Part 2: Links-->
+
+            <h3 id="part2">Alongside with your story you have shared, we want to be able to let others find a way to connect with you! We will include links to your portfolio and social platforms.</h3>
+
+            <label for="link1">What's your portfolio link?</label>
+            <input type="text" id="link1" name="link1">
+
+            <label for="link2">Instagram and/or Twitter handle</label>
+            <input type="text" id="link2" name="link2">
+
+            <form>
+                <label>May we have permission to use your profile picture from your website and/or social platform to include in our website?</label>
+                <br><br>
+                <input type="radio" name="yes" value="yes" checked>Yes<br>
+                <input type="radio" name="no" value="no">No<br>
+            </form>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+
+
+    <script>
+        /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
