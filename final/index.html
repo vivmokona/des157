@@ -191,6 +191,10 @@
                 },
             ]
         };
+        
+        //Add full screen button
+        
+        map.addControl(new mapboxgl.FullscreenControl(),'bottom-left');
 
         // Add zoom and rotation controls to the map.
         map.addControl(new mapboxgl.NavigationControl(), 'bottom-left');
