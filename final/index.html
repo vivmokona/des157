@@ -192,6 +192,12 @@
             ]
         };
         
+        // Add pop-up
+        var popup = new mapboxgl.Popup({closeOnClick: false})
+       .setLngLat([-98.5795, 39.8283])
+       .setHTML('<h2>Hello!</h2><h3>Scroll and zoom on the icons to find out designers of color. Then head over to "More Info" to create your own profile.</h3>')
+       .addTo(map);
+ 
         //Add full screen button
         map.addControl(new mapboxgl.FullscreenControl(),'bottom-left');
 
