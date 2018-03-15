@@ -20,7 +20,7 @@
     <div class="navbar">
         <section id="title"><a href="https://fxtzhou.github.io/des157/projects/final/index.html">Designers of Color Map</a></section>
 
-        <img id='logo' src="img/logo.png" alt="Logo" width="35px" height="35px">
+        <img id='logo' src="img/logo.png" alt="Logo" width="30px" height="30px">
     </div>
     
 <!--Dropdown-->
@@ -42,7 +42,7 @@
     
       <!--Key-->
         <div class="key">
-               <img id='symbols' src="img/symbols.png" alt="Symbols" width="145px" height="300px">
+               <img id='symbols' src="img/symbols.png" alt="Symbols" width="145px" height="280px">
             <h3>Key</h3>
         </div>
 </div>
@@ -51,8 +51,7 @@
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 </div>
         
-       
-
+<!--JS is in HTML b/c would not work if I had a separated yet linked page-->
     <script>
         mapboxgl.accessToken = 'pk.eyJ1Ijoidml2bW9rb25hIiwiYSI6ImNqZG92NGYyeDA4MGQycm80cDljaXEzbDAifQ.s9ln4rd7DomkLRJ4g7FOCA';
 
@@ -194,7 +193,7 @@
             ]
         };
         
-        // Add pop-up
+        // Add instructions pop-up
         var popup = new mapboxgl.Popup({closeOnClick: false})
        .setLngLat([-98.5795, 39.8283])
        .setHTML('<h2>Instructions</h2><h3>Scroll and zoom in on icons to find out Designers of Color. Then head over to the menu to <i>create your own</i> profile!</h3>')

@@ -48,7 +48,7 @@ body {
     background-color: inherit;
     margin: 0;
     top: -10px;
-    left: 40px;
+    left: 34px;
 }
 
 #logo {
@@ -56,7 +56,7 @@ body {
     background-color: inherit;
     margin: 0;
     left: .8%;
-    top: 2px;
+    top: 4px;
 }
 
 #logo:hover {
@@ -85,15 +85,6 @@ body {
 .mapboxgl-popup-content {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
-}
-
-.graphic {
-    background-image: url('mapbox-icon.png');
-    background-size: cover;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    cursor: pointer;
 }
 
 /*nav bar code*/
@@ -148,14 +139,6 @@ body {
     position: absolute;
     padding: 10px;
 }
-
-/*
-#symbols:hover {
-    transition: background-color 5s linear;
-    animation: colorshift 80s infinite;
-    transition-timing-function: ease-in;
-}
-*/
 
 .show {
     display: block;
