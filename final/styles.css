@@ -90,7 +90,7 @@ body {
 /*nav bar code*/
 
 .navbar {
-    height: 20px;
+    height: 30px;
     overflow: hidden;
     transition: background-color 5s linear;
     animation: colorshift 80s infinite;
