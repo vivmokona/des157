@@ -7,6 +7,7 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet'/>
     <link href=styles.css rel="stylesheet">
@@ -15,41 +16,42 @@
 <body>
     <div id='map'></div>
 
-    <!--Navigation-->
+<!--Navigation-->
     <div class="navbar">
         <section id="title"><a href="https://fxtzhou.github.io/des157/projects/final/index.html">Designers of Color Map</a></section>
 
-        <img id='logo' src="img/logo.png" alt="Logo" width="30px" height="30px">
+        <img id='logo' src="img/logo.png" alt="Logo" width="35px" height="35px">
     </div>
-
-        <!--Dropdown-->
+    
+<!--Dropdown-->
     <div class="navbar">
         <div class="dropdown">
-            <button class="dropbtn" onclick="myFunction()">More Info
+            <button class="dropbtn" onclick="myFunction()">
                 <i class="fa fa-caret-down"></i>
             </button>
-            <div class="dropdown-content" id="myDropdown">
-                <a class="active" href="https://vivmokona.github.io/des157/final/index.html">Home</a>
-                <a href="https://fxtzhou.github.io/des157/projects/final/index.html">About</a>
-                <a href="profile/form.html">Profile</a>
-                <a href="contact/index.html">Contact</a>
-            </div>
         </div>
         </div>
-        
-         <!--Key-->
+    
+    <!--New Nav-->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a class="active" href="https://vivmokona.github.io/des157/final/index.html">Home</a>
+   <a href="https://fxtzhou.github.io/des157/projects/final/index.html">About</a>
+  <a href="profile/form.html">Profile</a>
+  <a href="contact/index.html">Contact</a>
+    
+      <!--Key-->
         <div class="key">
-               <img id='symbols' src="img/symbols.png" alt="Symbols" width="100px" height="200px">
+               <img id='symbols' src="img/symbols.png" alt="Symbols" width="145px" height="300px">
             <h3>Key</h3>
         </div>
+</div>
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+</div>
         
-    <footer>
-        <a href="../index.html">Home</a>
-        <a href="https://github.com/vivmokona">Github</a>
-        <a href="mailto:vyluu@ucdavis.edu">Contact Me</a>
-        <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
-        <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
-    </footer>
+       
 
     <script>
         mapboxgl.accessToken = 'pk.eyJ1Ijoidml2bW9rb25hIiwiYSI6ImNqZG92NGYyeDA4MGQycm80cDljaXEzbDAifQ.s9ln4rd7DomkLRJ4g7FOCA';
@@ -195,7 +197,7 @@
         // Add pop-up
         var popup = new mapboxgl.Popup({closeOnClick: false})
        .setLngLat([-98.5795, 39.8283])
-       .setHTML('<h2>Hello!</h2><h3>Scroll and zoom on the icons to find out designers of color. Then head over to "More Info" to create your own profile.</h3>')
+       .setHTML('<h2>Instructions</h2><h3>Scroll and zoom in on icons to find out Designers of Color. Then head over to the menu to <i>create your own</i> profile!</h3>')
        .addTo(map);
  
         //Add full screen button
@@ -220,7 +222,15 @@
                     .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
                 .addTo(map);
         });
+        
+       /* New Nav JS */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
 
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
     </script>
 
 </body>
