@@ -2,56 +2,54 @@
 <html lang="en">
 
 <head>
-    <meta charset='utf-8'/>
+    <meta charset='utf-8' />
     <title>Find Your Designer</title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'/>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet'/>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
     <link href=styles.css rel="stylesheet">
 </head>
 
 <body>
     <div id='map'></div>
 
-<!--Navigation-->
+    <!--Navigation-->
     <div class="navbar">
         <section id="title"><a href="https://fxtzhou.github.io/des157/projects/final/index.html">Designers of Color Map</a></section>
-
-        <img id='logo' src="img/logo.png" alt="Logo" width="30px" height="30px">
     </div>
-    
-<!--Dropdown-->
+
+    <!--Dropdown-->
     <div class="navbar">
         <div class="dropdown">
             <button class="dropbtn" onclick="myFunction()">
                 <i class="fa fa-caret-down"></i>
             </button>
         </div>
-        </div>
-    
+    </div>
+
     <!--New Nav-->
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a class="active" href="https://vivmokona.github.io/des157/final/index.html">Home</a>
-   <a href="https://fxtzhou.github.io/des157/projects/final/index.html">About</a>
-  <a href="profile/form.html">Profile</a>
-  <a href="contact/index.html">Contact</a>
-    
-      <!--Key-->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="active" href="https://vivmokona.github.io/des157/final/index.html">Home</a>
+        <a href="https://fxtzhou.github.io/des157/projects/final/index.html">About</a>
+        <a href="profile/form.html">Profile</a>
+        <a href="contact/index.html">Contact</a>
+
+        <!--Key-->
         <div class="key">
-               <img id='symbols' src="img/symbols.png" alt="Symbols" width="145px" height="280px">
+            <img id='symbols' src="img/symbols.png" alt="Symbols" width="145px" height="280px">
             <h3>Key</h3>
         </div>
-</div>
+    </div>
 
-<div id="main">
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-</div>
-        
-<!--JS is in HTML b/c would not work if I had a separated yet linked page-->
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+
+    <!--JS is in HTML b/c would not work if I had a separated yet linked page-->
     <script>
         mapboxgl.accessToken = 'pk.eyJ1Ijoidml2bW9rb25hIiwiYSI6ImNqZG92NGYyeDA4MGQycm80cDljaXEzbDAifQ.s9ln4rd7DomkLRJ4g7FOCA';
 
@@ -192,15 +190,17 @@
                 },
             ]
         };
-        
+
         // Add instructions pop-up
-        var popup = new mapboxgl.Popup({closeOnClick: false})
-       .setLngLat([-98.5795, 39.8283])
-       .setHTML('<h2>Instructions</h2><h3>Scroll and zoom in on icons to find out Designers of Color. Then head over to the menu to <i>create your own</i> profile!</h3>')
-       .addTo(map);
- 
+        var popup = new mapboxgl.Popup({
+                closeOnClick: false
+            })
+            .setLngLat([-98.5795, 39.8283])
+            .setHTML('<h2>Instructions</h2><h3>Scroll and zoom in on icons to find out Designers of Color. Then head over to the menu to <i>create your own</i> profile!</h3>')
+            .addTo(map);
+
         //Add full screen button
-        map.addControl(new mapboxgl.FullscreenControl(),'bottom-left');
+        map.addControl(new mapboxgl.FullscreenControl(), 'bottom-left');
 
         // Add zoom and rotation controls to the map.
         map.addControl(new mapboxgl.NavigationControl(), 'bottom-left');
@@ -221,16 +221,18 @@
                     .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
                 .addTo(map);
         });
-        
-       /* New Nav JS */
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
+        /* New Nav JS */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
     </script>
 
 </body>
+
 </html>
