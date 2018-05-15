@@ -43,7 +43,7 @@ function submitForm(e) {
     // Hide alert after 3 seconds
     setTimeout(function () {
         document.querySelector('.alert').style.display = 'none';
-    }, 3000);
+    }, 8000);
 
     // Clear form
     document.getElementById('contactForm').reset();
