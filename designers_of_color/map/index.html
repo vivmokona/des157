@@ -33,7 +33,8 @@
     <!--New Nav-->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a class="active" href="../index.html">Home</a>
+        <a href="../index.html">Home</a>
+        <a class="active" href="index.html">Map</a>
         <a href="../about/about.html">About</a>
         <a href="../profile/form.html">Profile</a>
         <a href="../contact/index.html">Contact</a>
@@ -41,7 +42,7 @@
         <!--Key-->
         <div class="key">
             <img id='symbols' src="img/symbols.png" alt="Symbols" width="145px" height="280px">
-            <h3>Key</h3>
+            <h3 id="keyword">Key</h3>
         </div>
     </div>
 
@@ -230,6 +231,7 @@
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
+
     </script>
 
 </body>

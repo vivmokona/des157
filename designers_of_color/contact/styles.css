@@ -197,7 +197,7 @@ fieldset {
 
 #main {
     position: absolute;
-    top: -10px;
+    top: -12px;
     right: 0;
     transition: margin-left .5s;
     padding: 16px;
@@ -270,7 +270,7 @@ a {
 }
 
 h2 {
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 h3 {

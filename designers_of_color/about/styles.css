@@ -109,7 +109,7 @@ body {
 
 #main {
     position: absolute;
-    top: -10px;
+    top: -12px;
     right: 0;
     transition: margin-left .5s;
     padding: 16px;
@@ -198,8 +198,8 @@ article {
 }
 
 img {
-    width: 250px;
-    height: 250px;
+    width: 230px;
+    height: 230px;
     border-radius: 50%;
 }
 
@@ -219,13 +219,13 @@ h2 {
 
 h3 {
     font-family: 'Rock Salt', cursive;
-    padding-top: 10px;
+    padding-top: 20px;
     font-size: 1.4vw;
     line-height: 0.5vw;
 }
 
 h4 {
-    font-size: 1.5vw;
+    font-size: 1.35vw;
     line-height: 160%;
     font-weight: 400;
 

@@ -138,6 +138,7 @@ body {
 #symbols {
     position: absolute;
     padding: 10px;
+    padding-top: 40px;
 }
 
 .show {
@@ -187,6 +188,10 @@ body {
     transition: margin-left .5s;
     padding: 16px;
     color: white;
+}
+
+#keyword h3 {
+    padding-top: 30px;
 }
 
 /*Changes inside nav*/
