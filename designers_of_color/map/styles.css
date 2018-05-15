@@ -186,6 +186,7 @@ body {
     right: 0;
     transition: margin-left .5s;
     padding: 16px;
+    color: white;
 }
 
 /*Changes inside nav*/
